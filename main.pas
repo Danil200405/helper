@@ -52,7 +52,17 @@ begin
      end;
 end;
 
-
+procedure Fa();
+var p,v,g,F_a: real; 
+begin
+      g:=9.8;
+      writeln('Please enter V');
+      readln(v);
+      writeln('Please enter density  P');
+      readln(p);
+      F_a:=P*G*V;
+      writeln(' Fa = ',F_a:0:0);
+end;         
 
 var
     command:string;
@@ -65,7 +75,16 @@ begin
         if command = 'sin' then sinus()
         else if command = 'cos' then cosinus()
         else if command = 'eq2' then eq2()
-        else if command = 'exit' then next := false;
-        {add precedures 1) ax^2+bx+c = 0    2) no such command }
+        else if command = 'Fa' then Fa()
+        else if command = 'exit' then next := false
+	else
+           begin
+	      writeln(' cos -  finding the cosine');
+              writeln(' eq2 -  quadratic solution');
+              writeln(' exit -  exit');
+              writeln(' sinus -  finding the sinus');
+              writeln(' Fa -  finding the Archimedes strength');
+
+	   end;
     end;
 end.
